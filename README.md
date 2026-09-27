@@ -74,10 +74,10 @@ Check the kernel messages:
 dmesg
 ```
 
-Look for:
+Look for recent event eg :
 
 ```text
-urndis0
+urndis0 ...
 ```
 
 Create:
