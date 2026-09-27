@@ -224,3 +224,13 @@ Firmware:
 ```sh
 fw_update
 ```
+
+## Service Management
+
+Enable `apmd` with automatic power management:
+
+```sh
+rcctl enable apmd
+rcctl set apmd flags -A
+rcctl start apmd
+
