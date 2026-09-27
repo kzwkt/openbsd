@@ -1,0 +1,73 @@
+DeskTopSize 2 2
+EdgeScroll 0 0
+EdgeResistance 500
+EdgeThickness 1
+
+Style * BorderWidth 4, HandleWidth 4
+Style * WindowFont "sans-serif:size=10:weight=bold"
+Style * ClickToFocus, RaiseOnClick
+Style * RandomPlacement, SmartPlacement
+
+Style * MWMDecorHints, HintOverride
+Style * FvwmBorder, FirmBorder
+Style * DecorateTransient
+Colorset 0 fg=#cccccc, bg=#1e1e1e, hi=#333333, sh=#111111
+Colorset 1 fg=#ffffff, bg=#2d2d2d, hi=#444444, sh=#1a1a1a
+Style * Colorset 0
+Style * HilightColorset 1
+
+Style * MenuColorset 0
+Style * ActiveMenuColorset 1
+
+TitleStyle LeftJustified
+AddTitleStyle AllActive Colorset 1
+AddTitleStyle AllInactive Colorset 0
+
+BusyCursor DynamicMenu False, Read True
+CursorStyle ROOT         left_ptr
+CursorStyle TITLE        left_ptr
+CursorStyle DEFAULT      left_ptr
+
+# Mouse Button Context Modifiers Function
+Mouse 0 4 A Iconify
+Mouse 0 2 A Maximize 100 100
+Mouse 0 6 A Close 
+
+Mouse 1 T A Move
+Mouse 1 W M Move
+Mouse 1 F A Resize
+Mouse 1 I A Iconify -1
+
+Key Return A M-Mod1 Exec exec xterm
+Key 1 A M GotoPage 0 0
+Key 2 A M GotoPage 1 0
+Key 3 A M GotoPage 0 1
+Key 4 A M GotoPage 1 1
+
+AddToFunc MoveRaiseMaximize
++ "C" Raise
++ "M" Move
++ "D" Maximize 100 100
+
+Mouse 1 T A MoveRaiseMaximize
+
+AddToFunc SwitchWindow
++ I FlipFocus
++ I Raise
+
+Key Tab A M Next (CurrentDesk) SwitchWindow
+Key Tab A S-M Prev (CurrentDesk) SwitchWindow
+
+Mouse 1 R A Menu RootMenu
+
+DestroyMenu RootMenu
+AddToMenu RootMenu "Menu" Title
++ "Xterm" Exec exec xterm
++ "Firefox" Exec exec firefox
++ "" Nop
++ "Restart" Restart
++ "Exit" Quit
+
+#AddToFunc StartFunction
+#+ I Exec exec xterm
+
