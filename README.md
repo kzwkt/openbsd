@@ -149,6 +149,9 @@ join "SSID" wpakey "PASSWORD"
 inet autoconf
 inet6 autoconf
 ```
+or
+
+ifconfig iwm0 nwid SSIDNAME wpakey PASSWORD
 
 Start Wi-Fi:
 
