@@ -247,7 +247,13 @@ wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
 radeondrm0: HAINAN
 [drm] *ERROR* Unable to locate a BIOS ROM
 drm:pid0:radeondrm_attachhook *ERROR* Fatal error during GPU init
-
+```
 doas config -ef /bsd
+```
+
+```
 disable radeondrm
+```
+```
 quit
+```
