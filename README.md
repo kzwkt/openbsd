@@ -237,3 +237,16 @@ rcctl enable apmd
 rcctl set apmd flags -A
 rcctl start apmd
 
+## Amd gpu issue
+radeondrm0 at pci1 dev 0 function 0 "ATI Radeon HD 8670M" rev 0x81
+drm1 at radeondrm0
+radeondrm0: msi
+inteldrm0: 1366x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+radeondrm0: HAINAN
+[drm] *ERROR* Unable to locate a BIOS ROM
+drm:pid0:radeondrm_attachhook *ERROR* Fatal error during GPU init
+
+doas config -ef /bsd
+disable radeondrm
+quit
