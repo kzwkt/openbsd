@@ -237,7 +237,8 @@ rcctl enable apmd
 rcctl set apmd flags -A
 rcctl start apmd
 
-## Amd gpu issue
+
+# Amd gpu issue
 radeondrm0 at pci1 dev 0 function 0 "ATI Radeon HD 8670M" rev 0x81
 drm1 at radeondrm0
 radeondrm0: msi
