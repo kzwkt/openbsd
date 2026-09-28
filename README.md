@@ -236,7 +236,7 @@ Enable `apmd` with automatic power management:
 rcctl enable apmd
 rcctl set apmd flags -A
 rcctl start apmd
-'''
+```
 
 ## Amd gpu issue
 radeondrm0 at pci1 dev 0 function 0 "ATI Radeon HD 8670M" rev 0x81
